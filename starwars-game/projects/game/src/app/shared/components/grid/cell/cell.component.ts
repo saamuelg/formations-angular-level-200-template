@@ -1,10 +1,11 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { changeStateCell, TileCell } from '../models';
+import {ChangeDetectionStrategy, Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {changeStateCell, TileCell} from '../models';
 
 @Component({
   selector: 'game-cell',
   templateUrl: './cell.component.html',
   styleUrls: ['./cell.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
 })
 export class CellComponent implements OnInit {
